@@ -1,7 +1,7 @@
+# The mod is outdated and wont work until i feel like updating it
+
 # AvatarSearcher
 Allows you to search avatars using SARS/ARES
-
-# The mod is outdated and wont work until i feel like updating it
 
 **YOU NEED A [SARS/ARES](https://github.com/Dean2k/S.A.R.S/tree/master/SARS) API KEY FOR THIS MOD**
 

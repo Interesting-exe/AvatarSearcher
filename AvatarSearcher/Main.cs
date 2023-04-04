@@ -30,7 +30,6 @@ namespace AvatarSearcher
 
         public override void OnInitializeMelon()
         {
-            SARSUtils.OnIntialize();
             MelonCoroutines.Start(WaitForMain());
             base.OnInitializeMelon();
         }
@@ -215,26 +214,23 @@ namespace AvatarSearcher
                 var avi = new Object1PublicOb1BoObStBoDaStBo1Unique();
                 
                 var apiAvi = new ApiAvatar();
-                apiAvi._id_k__BackingField = aresAvi.AvatarID;
-                apiAvi.id = aresAvi.AvatarID;
-                apiAvi.thumbnailImageUrl = aresAvi.ThumbnailURL;
+                apiAvi._id_k__BackingField = aresAvi.avatarId;
+                apiAvi.id = aresAvi.avatarId;
+                apiAvi.thumbnailImageUrl = aresAvi.thumbnailUrl;
                 apiAvi._thumbnailImageUrl_k__BackingField =
-                    aresAvi.ThumbnailURL;
-                apiAvi.description = aresAvi.AvatarDescription;
-                apiAvi._description_k__BackingField = aresAvi.AvatarDescription;
-                apiAvi.name = aresAvi.AvatarName;
-                apiAvi._name_k__BackingField = aresAvi.AvatarName;
-                apiAvi.authorName = aresAvi.AuthorName;
-                apiAvi._authorName_k__BackingField = aresAvi.AuthorName;
-                apiAvi.authorId = aresAvi.AuthorID;
-                apiAvi._authorId_k__BackingField = aresAvi.AuthorID;
-                apiAvi.imageUrl = aresAvi.ImageURL;
+                    aresAvi.thumbnailUrl;
+                apiAvi.description = aresAvi.avatarDescription;
+                apiAvi._description_k__BackingField = aresAvi.avatarDescription;
+                apiAvi.name = aresAvi.avatarName;
+                apiAvi._name_k__BackingField = aresAvi.avatarName;
+                apiAvi.authorName = aresAvi.authorName;
+                apiAvi._authorName_k__BackingField = aresAvi.authorName;
+                apiAvi.authorId = aresAvi.authorId;
+                apiAvi._authorId_k__BackingField = aresAvi.authorId;
+                apiAvi.imageUrl = aresAvi.imageUrl;
                 apiAvi._imageUrl_k__BackingField =
-                    aresAvi.ImageURL;
-                apiAvi.assetUrl = aresAvi.PCAssetURL;
-                apiAvi._assetUrl_k__BackingField =
-                    aresAvi.PCAssetURL;
-                
+                    aresAvi.imageUrl;
+
                 avi.field_Protected_TYPE_0 = apiAvi;
                 
                 shownAvatars.field_Private_List_1_Object_0.Add(avi);
@@ -281,17 +277,16 @@ namespace AvatarSearcher
         public static void AddFavorite(ApiAvatar avatar)
         {
             Avatar avi = new Avatar();
-            avi.AvatarDescription = avatar.description;
-            avi.AuthorName = avatar.authorName;
-            avi.AuthorID = avatar.authorId;
-            avi.AvatarID = avatar.id;
-            avi.AvatarName = avatar.name;
-            avi.ImageURL = avatar.imageUrl;
-            avi.PCAssetURL = avatar.assetUrl;
-            avi.ThumbnailURL = avatar.thumbnailImageUrl;
+            avi.avatarDescription = avatar.description;
+            avi.authorName = avatar.authorName;
+            avi.authorId = avatar.authorId;
+            avi.avatarId = avatar.id;
+            avi.avatarName = avatar.name;
+            avi.imageUrl = avatar.imageUrl;
+            avi.thumbnailUrl = avatar.thumbnailImageUrl;
             foreach (Avatar av in favoriteList)
             {
-                if (av.AvatarID == avi.AvatarID)
+                if (av.avatarId == avi.avatarId)
                 {
                     favoriteList.Remove(av);
                     return;
@@ -319,25 +314,22 @@ namespace AvatarSearcher
                 var avi = new Object1PublicOb1BoObStBoDaStBo1Unique();
 
                 var apiAvi = new ApiAvatar();
-                apiAvi._id_k__BackingField = aresAvi.AvatarID;
-                apiAvi.id = aresAvi.AvatarID;
-                apiAvi.thumbnailImageUrl = aresAvi.ThumbnailURL;
+                apiAvi._id_k__BackingField = aresAvi.avatarId;
+                apiAvi.id = aresAvi.avatarId;
+                apiAvi.thumbnailImageUrl = aresAvi.thumbnailUrl;
                 apiAvi._thumbnailImageUrl_k__BackingField =
-                    aresAvi.ThumbnailURL;
-                apiAvi.description = aresAvi.AvatarDescription;
-                apiAvi._description_k__BackingField = aresAvi.AvatarDescription;
-                apiAvi.name = aresAvi.AvatarName;
-                apiAvi._name_k__BackingField = aresAvi.AvatarName;
-                apiAvi.authorName = aresAvi.AuthorName;
-                apiAvi._authorName_k__BackingField = aresAvi.AuthorName;
-                apiAvi.authorId = aresAvi.AuthorID;
-                apiAvi._authorId_k__BackingField = aresAvi.AuthorID;
-                apiAvi.imageUrl = aresAvi.ImageURL;
+                    aresAvi.thumbnailUrl;
+                apiAvi.description = aresAvi.avatarDescription;
+                apiAvi._description_k__BackingField = aresAvi.avatarDescription;
+                apiAvi.name = aresAvi.avatarName;
+                apiAvi._name_k__BackingField = aresAvi.avatarName;
+                apiAvi.authorName = aresAvi.authorName;
+                apiAvi._authorName_k__BackingField = aresAvi.authorName;
+                apiAvi.authorId = aresAvi.authorId;
+                apiAvi._authorId_k__BackingField = aresAvi.authorId;
+                apiAvi.imageUrl = aresAvi.imageUrl;
                 apiAvi._imageUrl_k__BackingField =
-                    aresAvi.ImageURL;
-                apiAvi.assetUrl = aresAvi.PCAssetURL;
-                apiAvi._assetUrl_k__BackingField =
-                    aresAvi.PCAssetURL;
+                    aresAvi.imageUrl;
 
                 avi.field_Protected_TYPE_0 = apiAvi;
 

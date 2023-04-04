@@ -21,7 +21,7 @@ namespace AvatarSearcher
 
             var jsonObj = new{
                 avatarName = search,
-                amount = 10
+                amount = 1000
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(jsonObj), Encoding.UTF8, "application/json");
@@ -48,7 +48,7 @@ namespace AvatarSearcher
             
             var jsonObj = new{
                 authorId = search,
-                amount = 10
+                amount = 1000
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(jsonObj), Encoding.UTF8, "application/json");
